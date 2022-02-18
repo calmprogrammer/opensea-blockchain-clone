@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import openseaLogo from "../assets/opensea.png"
-import {AiOutlineSearch} from "react-icons/ai"
-import {MdOutlineAccountBalanceWallet} from "react-icons/md"
-import {CgProfile} from "react-icons/cg"
-
+import openseaLogo from '../assets/opensea.png'
+import { AiOutlineSearch } from 'react-icons/ai'
+import { MdOutlineAccountBalanceWallet } from 'react-icons/md'
+import { CgProfile } from 'react-icons/cg'
 
 const style = {
   wrapper: `bg-[#04111d] w-screen px-[1.2rem] py-[0.8rem] flex `,
@@ -22,32 +21,35 @@ const style = {
 const Header = () => {
   return (
     <div className={style.wrapper}>
-      <Link href="">
+      <Link href="/">
         <div className={style.logoContainer}>
           <Image src={openseaLogo} height={40} width={40} />
           <div className={style.logoText}>Opensea</div>
         </div>
       </Link>
       <div className={style.searchBar}>
-          <div className={style.searchIcon}>
-            <AiOutlineSearch/>
-          </div>
-         <input className={style.searchInput} placeholder="Search items,collections, and accounts"/>
+        <div className={style.searchIcon}>
+          <AiOutlineSearch />
+        </div>
+        <input
+          className={style.searchInput}
+          placeholder="Search items,collections, and accounts"
+        />
       </div>
       <div className={style.headerItems}>
-          <Link href={"/collections/0x0CB087b093DBE56ee44c721C1b90c019d6a33562"}>
+        <Link href={'/collections/0x0CB087b093DBE56ee44c721C1b90c019d6a33562'}>
           <div className={style.headerItem}>Collections </div>
-          </Link>
-          
-          <div className={style.headerItem}>Stats </div>
-          <div className={style.headerItem}>Resources </div>
-          <div className={style.headerItem}>Create </div>
-          <div className={style.headerIcon}>
-              <CgProfile/>
-          </div>
-          <div className={style.headerIcon}>
-              <MdOutlineAccountBalanceWallet/>
-          </div>
+        </Link>
+
+        <div className={style.headerItem}>Stats </div>
+        <div className={style.headerItem}>Resources </div>
+        <div className={style.headerItem}>Create </div>
+        <div className={style.headerIcon}>
+          <CgProfile />
+        </div>
+        <div className={style.headerIcon}>
+          <MdOutlineAccountBalanceWallet />
+        </div>
       </div>
     </div>
   )
